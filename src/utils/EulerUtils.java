@@ -160,4 +160,26 @@ public final class EulerUtils {
 	        
 	    return factorial;
 	}
+	
+	public static boolean isPalindrome(String str) {
+		String tmp_str = str.replaceAll("\\s", "");
+		if(tmp_str.equals(reverseStr(tmp_str))) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public static String reverseStr(String str) {
+		StringBuilder letterBuff = new StringBuilder(str);
+		return letterBuff.reverse().toString();
+	}
+	
+	public static String convertToBin(int nb) {
+		return Integer.toBinaryString(nb);
+	}
+	
+	public static boolean isPythagoreanTriplet(int a, int b, int c) {
+		return (a*a + b*b) == c*c;
+	}
 }

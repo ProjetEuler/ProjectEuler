@@ -16,7 +16,7 @@ public class Main {
 			for (int a = 1; a < p/2; a++) {
 				for (int b = 1; b < p/2; b++) {
 					for (int c = 1; c < p/2; c++) {
-						if(a+b+c == p && isPythagoreanTriplet(a, b, c)) {
+						if(a+b+c == p && EulerUtils.isPythagoreanTriplet(a, b, c)) {
 							nb_trilpet++;
 						}
 					}
@@ -32,9 +32,4 @@ public class Main {
 		System.err.println("P : " + index);
 		EulerUtils.getExecutionTime(start);
 	}
-	
-	public static boolean isPythagoreanTriplet(int a, int b, int c) {
-		return (a*a + b*b) == c*c;
-	}
-
 }
