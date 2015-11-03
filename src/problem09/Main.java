@@ -1,9 +1,11 @@
-package problem9;
+package problem09;
 
 import utils.EulerUtils;
 
 public class Main {
 	public static void main(String[] args) {
+		long start = EulerUtils.getTime();
+		
 		for(int a = 0; a<1000; a++) {
 			for(int b = 0; b<1000; b++) {
 				for(int c = 0; c<1000; c++) {
@@ -16,6 +18,8 @@ public class Main {
 				}
 			}
 		}
+		
+		EulerUtils.getExecutionTime(start);
 	}
 
 	public static boolean isRightSum(int a, int b, int c) {

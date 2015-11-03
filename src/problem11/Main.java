@@ -1,5 +1,7 @@
 package problem11;
 
+import utils.EulerUtils;
+
 public class Main {
 
 	private static int matrice[][] = {{8, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 8},
@@ -28,6 +30,8 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+		long start = EulerUtils.getTime();
+		
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j <= 16; j++) {
 				if(matrice[i][j] * matrice[i][j+1] * matrice[i][j+2] * matrice[i][j+3] > greatest_product) {
@@ -57,6 +61,7 @@ public class Main {
 				}
 			}
 		}
+		
 		for (int i = 0; i < 16; i++) {
 			for (int j = 0; j < 16; j++) {
 				if(matrice[i][j] * matrice[i+1][j+1] * matrice[i+2][j+2] * matrice[i+3][j+3] > greatest_product) {
@@ -78,8 +83,7 @@ public class Main {
 		}
 		
 		System.out.println(greatest_product);
-		System.out.println(index_x);
-		System.out.println(index_y);
-		System.out.println();
+
+		EulerUtils.getExecutionTime(start);
 	}
 }

@@ -16,6 +16,7 @@ public class Main {
 		} while (EulerUtils.nextPermutation(array) && counter != 1000000);
 		
 		System.out.println(Arrays.toString(array).toString().replace(", ", ""));
+		
 		EulerUtils.getExecutionTime(start);
 	}
 }

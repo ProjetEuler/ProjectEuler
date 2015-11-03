@@ -2,10 +2,12 @@ package problem13;
 
 import java.math.BigInteger;
 
+import utils.EulerUtils;
+
 
 public class Main {
 	public static void main(String[] args) {
-		
+		long start = EulerUtils.getTime();
 		
 		BigInteger somme = new BigInteger("0");
 		BigInteger[] array = {new BigInteger("37107287533902102798797998220837590246510135740250"),
@@ -114,6 +116,8 @@ public class Main {
 		}
 		
 		System.out.println(somme.toString().substring(0, 10));
+		
+		EulerUtils.getExecutionTime(start);
 	}
 
 }

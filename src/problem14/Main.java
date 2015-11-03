@@ -4,7 +4,7 @@ import utils.EulerUtils;
 
 public class Main {
 	public static void main(String args[]) {
-		long start = System.nanoTime();
+		long start = EulerUtils.getTime();
 		
 		long index = 0;
 		long collatz_length = 0;

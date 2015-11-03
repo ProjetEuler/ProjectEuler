@@ -2,8 +2,12 @@ package problem16;
 
 import java.math.BigInteger;
 
+import utils.EulerUtils;
+
 public class Main {
 	public static void main(String[] args) {
+		long start = EulerUtils.getTime();
+		
 		BigInteger number = new BigInteger("1");
 		
 		for (int i = 0; i < 1000; i++) {
@@ -19,6 +23,8 @@ public class Main {
 		}
 		
 		System.out.println("Somme : " + somme);
+		
+		EulerUtils.getExecutionTime(start);
 	}
 
 }

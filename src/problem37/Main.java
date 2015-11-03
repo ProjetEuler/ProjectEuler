@@ -6,6 +6,7 @@ import utils.EulerUtils;
 
 public class Main {
 	public static void main(String[] args) {
+		long start = EulerUtils.getTime();
 
 		int counter = 0;
 		int somme = 0;
@@ -24,6 +25,8 @@ public class Main {
 		}
 		
 		System.out.println("Somme : " + somme);
+		
+		EulerUtils.getExecutionTime(start);
 	}
 
 	public static boolean checkByLeft(int nb) {

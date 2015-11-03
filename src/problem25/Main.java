@@ -2,8 +2,12 @@ package problem25;
 
 import java.math.BigInteger;
 
+import utils.EulerUtils;
+
 public class Main {
 	public static void main(String[] args) {
+		long start = EulerUtils.getTime();
+		
 		BigInteger a = new BigInteger("1");
 		BigInteger b = new BigInteger("1");
 		BigInteger sum = new BigInteger("0");
@@ -19,13 +23,7 @@ public class Main {
 		
 		System.out.println("Length : "+sum.toString().length());
 		System.out.println("F"+counter+" : "+sum);
-	}
-	
-	public static BigInteger fibo(BigInteger n) {
-		if(n.compareTo(new BigInteger("1")) == -1 || n.compareTo(new BigInteger("1")) == 0) {
-			return n;
-		} else {
-			return fibo(n.subtract(new BigInteger("2"))).add(fibo(n.subtract(new BigInteger("1"))));
-		}
+		
+		EulerUtils.getExecutionTime(start);
 	}
 }

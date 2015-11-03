@@ -9,6 +9,7 @@ import utils.EulerUtils;
 public class Main {
 	public static void main(String[] args) {
 		long start = EulerUtils.getTime();
+		
 		ArrayList<BigInteger> arr = new ArrayList<>();
 		
 		for(int i = 2; i <= 100; i++) {
@@ -20,6 +21,7 @@ public class Main {
 		arr = new ArrayList<BigInteger>(new LinkedHashSet<BigInteger>(arr));
 		
 		System.out.println(arr.size());
+		
 		EulerUtils.getExecutionTime(start);
 	}
 }
